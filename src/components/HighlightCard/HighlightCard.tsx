@@ -13,7 +13,7 @@ type Props = WithClassName & {
 
 export const HighlightCard: FC<Props> = ({ highlight, className }) => {
     return (
-        <div className={cn(styles.highlightCard, className)}>
+        <div data-testid="highlight-item" className={cn(styles.highlightCard, className)}>
             <Typography size="xl" weight="medium">
                 {highlight.title}
             </Typography>

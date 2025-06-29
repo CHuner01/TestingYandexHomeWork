@@ -8,8 +8,8 @@ import cn from 'classnames';
 
 import styles from './GeneratePage.module.css';
 
-// 10 мб
-const DEFAULT_SIZE = 0.01;
+
+const DEFAULT_SIZE = 0.0001;
 
 export const GeneratePage = () => {
     const [isGenerating, setIsGenerating] = useState(false);
@@ -66,7 +66,7 @@ export const GeneratePage = () => {
 
         const timeout = setTimeout(() => {
             setSuccessMessage(null);
-        }, 2000);
+        }, 10000);
 
         return () => clearTimeout(timeout);
     }, [successMessage]);
@@ -78,6 +78,7 @@ export const GeneratePage = () => {
             </Typography>
 
             <Button
+                data-testid="generate-button"
                 type="button"
                 variant="primary"
                 disabled={isGenerating}
