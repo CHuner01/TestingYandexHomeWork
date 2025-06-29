@@ -61,7 +61,7 @@ describe("Страница с анализом файла", () => {
         const user = userEvent.setup();
         render(<HomePage />);
 
-        const file = new File(['a,b\n1,2'], 'test.csv', { type: 'text/csv' });
+        const file = new File(['1,2\n1,2'], 'test.csv', { type: 'text/csv' });
         const input = screen.getByTestId('file-input') as HTMLInputElement;
 
         await user.upload(input, file);
@@ -96,7 +96,7 @@ describe("Страница с анализом файла", () => {
         const user = userEvent.setup();
         render(<HomePage />);
 
-        const file = new File(['a,b\n1,2'], 'test.csv', { type: 'text/csv' });
+        const file = new File(['1,2\n1,2'], 'test.csv', { type: 'text/csv' });
         const input = screen.getByTestId('file-input') as HTMLInputElement;
         await user.upload(input, file);
 
@@ -126,7 +126,7 @@ describe("Страница с анализом файла", () => {
         const user = userEvent.setup();
         render(<HomePage />);
 
-        const file = new File(['a,b\n1,2'], 'test.csv', { type: 'text/csv' });
+        const file = new File(['1,2\n1,2'], 'test.csv', { type: 'text/csv' });
         const input = screen.getByTestId('file-input') as HTMLInputElement;
         await user.upload(input, file);
 
